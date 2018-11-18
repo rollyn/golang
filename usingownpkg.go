@@ -9,4 +9,5 @@ func main() {
 	
 	i23 := int64(23)
 	fmt.Println(  c.DecimalToBinary(i23) )
+	
 }
