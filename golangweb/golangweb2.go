@@ -25,7 +25,14 @@ func main() {
 	
 	fruits := []string{"banana","apple","guava"}
 
-	err := tpl.Execute(os.Stdout, fruits)
+	fruits = append(fruits, "strawberry")
+
+	data := struct {
+				Fruits []string
+			}{
+				fruits,
+			}
+	err := tpl.Execute(os.Stdout, data)
 	if err != nil{
 		log.Fatalln(err)
 	}
