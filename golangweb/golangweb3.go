@@ -16,6 +16,11 @@ type person struct {
 	Fname string
 }
 
+func (p person) Speak() string {
+	// fmt.Println(p.Fname, " speaks....")
+	return p.Fname + " speaks...."
+}
+
 func init() {
 	fmt.Println("running init....")
 	tpl = template.Must(template.ParseGlob("type2.gohtml"))
