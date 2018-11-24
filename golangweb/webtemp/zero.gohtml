@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+	<h1>{{.Lname}} {{ .Fname}}</h1>
+	{{ if .LicenseToKill}}
+		<h1>License to Kill</h1>
+	{{ else }}
+		<h1>No License to Kill</h1>
+	{{ end }}	
+</body>
+</html>
