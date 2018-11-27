@@ -14,7 +14,7 @@ func (p *Person) Speak() string {
 
 func main() {
 	
-	p := Person{"acid"}
+	p := &Person{"acid"}
 
 	fmt.Println( p.Speak() )
 }
