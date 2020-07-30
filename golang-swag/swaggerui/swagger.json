@@ -1,0 +1,61 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "The purpose of this application is to test go-swagger in a simple GET request.",
+    "title": "Testing go-swagger generation",
+    "contact": {
+      "email": "rollyn.moises@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    },
+    "version": "0.0.1"
+  },
+  "host": "localhost:5000",
+  "paths": {
+    "/order": {
+      "get": {
+        "description": "Returns an order",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "order"
+        ],
+        "operationId": "order",
+        "responses": {
+          "200": {
+            "description": "The Order object"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "orderHandler": {
+      "description": "HTTP status code 200",
+      "headers": {
+        "orderID": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+  }
+}
